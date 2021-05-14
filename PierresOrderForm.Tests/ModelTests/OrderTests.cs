@@ -74,8 +74,24 @@ namespace PierresOrderForm.Tests
             List<Orders> result = Orders.GetAll();
             CollectionAssert.AreEqual(newList, result);
             
-        }
-        
+        } 
+        [TestMethod]
+        public void GetAll_ReturnsOrders_OrdersList()
+        {
+            string orderstitle = "Joe's Cafe Order";
+            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersdate = "05/14/2021"; 
+            string ordersprice = "$185.50";
+            string orderstitle2 = "Joe's Cafe Order";
+            string ordersdescription2 = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersdate2 = "05/14/2021"; 
+            string ordersprice2 = "$185.50";
 
+        Orders newOrders1 = new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+        Orders newOrders2 = new Orders(orderstitle2, ordersdescription2, ordersdate2, ordersprice2);
+        List<Orders> newOrders = new List<Orders> { newOrders1, newOrders2 };
+        List<Orders> result = Orders.GetAll();
+        CollectionAssert.AreEqual(newOrders, result);
+        }
     }
 }

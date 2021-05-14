@@ -29,5 +29,10 @@ namespace PierresOrderForm.Models
         {
             _instances.Clear();
         }
+        
+        public static Orders Find(int searchId)
+        {
+            return _instances[searchId-1];
+        }
     }
 }
