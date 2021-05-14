@@ -8,7 +8,15 @@ namespace PierresOrderForm.Models
         public string OrdersDescription { get; set; }
         public string OrdersDate { get; set; }
         public int Id { get; }
-        public decimal OrdersPrice  { get; set; }
+        public string OrdersPrice  { get; set; }
         private static List<Orders> _instances = new() { };
+
+        public Orders(string orderstitle, string ordersdescription, string ordersdate, string ordersprice)
+        {
+            OrdersTitle = "";
+            OrdersDescription = ordersdescription;
+            OrdersDate = ordersdate; 
+            OrdersPrice = ordersprice;
+        }
     }
 }

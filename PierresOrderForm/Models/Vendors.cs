@@ -15,5 +15,6 @@ namespace PierresOrderForm.Models
             VendorDescription = vendordescription;
             Orders = new List<Orders>{};
         }
+
     }
 }

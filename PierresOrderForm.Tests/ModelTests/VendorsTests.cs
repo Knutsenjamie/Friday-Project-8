@@ -25,7 +25,7 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void GetVendorsDescription_ReturnsVendorsDescription_String()
         {
-            string vendordescription = "Invoice Order of 150 Eclairs";
+            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
             string vendorsname = "Joe's Cafe";
             Vendors newVendors =  new Vendors(vendordescription, vendorsname);
             string result = newVendors.VendorDescription;
