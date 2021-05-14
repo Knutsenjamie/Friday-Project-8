@@ -9,7 +9,7 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void VendorsConstructor_CreatesInstanceOfVendors_Vendors()
         {
-            Vendors newVendors = new Vendors();
+            Vendors newVendors = new Vendors("Test Vendor");
             Assert.AreEqual(typeof(Vendors), newVendors.GetType());
         }
         [TestMethod]
