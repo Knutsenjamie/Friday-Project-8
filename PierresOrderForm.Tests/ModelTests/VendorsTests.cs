@@ -51,5 +51,19 @@ namespace PierresOrderForm.Tests
             Assert.AreEqual(1, result);
         }
 
+        [TestMethod]
+        public void GetAll_ReturnsAllVendorsObjects_VendorsList()
+        {
+            string vendordescription1 = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsname1 = "Joe's Cafe";
+            string vendordescription2 = "Pietro's Pizzeria - local american/italian pizzeria serving hand-tossed pies daily";
+            string vendorsname2 = "Pietro's Pizzeria";
+            Vendors newVendors1 = new Vendors(vendordescription1, vendorsname1);
+            Vendors newVendors2 = new Vendors(vendordescription2, vendorsname2);
+            List<Vendors> newList = new List<Vendors> { newVendors1, newVendors2 };
+            List<Vendors> result = Vendors.GetAll();
+            CollectionAssert.AreEqual(newList, result);
+        }
+
     }
 }
