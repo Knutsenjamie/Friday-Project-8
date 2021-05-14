@@ -21,50 +21,50 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void GetOrdersTitle_ReturnsOrdersTitle_String()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
             
-            Orders newOrders =  new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            Orders newOrders =  new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
             string result = newOrders.OrdersTitle;
-            Assert.AreEqual(orderstitle, result);
+            Assert.AreEqual(ordersTitle, result);
         }
         [TestMethod]
         public void GetOrdersDescription_ReturnsOrdersDescription_String()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
             
-            Orders newOrders =  new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            Orders newOrders =  new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
             string result = newOrders.OrdersDescription;
-            Assert.AreEqual(ordersdescription, result);
+            Assert.AreEqual(ordersDescription, result);
         }
         [TestMethod]
         public void GetOrdersDate_ReturnsOrdersDate_String()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
             
-            Orders newOrders =  new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            Orders newOrders =  new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
             string result = newOrders.OrdersDate;
-            Assert.AreEqual(ordersdate, result);
+            Assert.AreEqual(ordersDate, result);
         }
         [TestMethod]
         public void GetOrdersPrice_ReturnsOrdersPrice_String()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
             
-            Orders newOrders =  new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            Orders newOrders =  new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
             string result = newOrders.OrdersPrice;
-            Assert.AreEqual(ordersprice, result);
+            Assert.AreEqual(ordersPrice, result);
         }
         [TestMethod]
         public void GetAll_ReturnsEmptyList_OrderList()
@@ -78,17 +78,17 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void GetAll_ReturnsOrders_OrdersList()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
-            string orderstitle2 = "Pietro's Pizzeria Order";
-            string ordersdescription2 = "Pietro's Pizzeria Order Invoice For 4 cases of pizza dough (50 per case)";
-            string ordersdate2 = "05/20/2021"; 
-            string ordersprice2 = "$171.95";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
+            string ordersTitle2 = "Pietro's Pizzeria Order";
+            string ordersDescription2 = "Pietro's Pizzeria Order Invoice For 4 cases of pizza dough (50 per case)";
+            string ordersDate2 = "05/20/2021"; 
+            string ordersPrice2 = "$171.95";
 
-            Orders newOrders1 = new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
-            Orders newOrders2 = new Orders(orderstitle2, ordersdescription2, ordersdate2, ordersprice2);
+            Orders newOrders1 = new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
+            Orders newOrders2 = new Orders(ordersTitle2, ordersDescription2, ordersDate2, ordersPrice2);
             List<Orders> newOrders = new List<Orders> { newOrders1, newOrders2 };
             List<Orders> result = Orders.GetAll();
             CollectionAssert.AreEqual(newOrders, result);
@@ -97,17 +97,17 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void Find_ReturnsCorrectOrders_Orders()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
-            string orderstitle2 = "Pietro's Pizzeria Order";
-            string ordersdescription2 = "Pietro's Pizzeria Order Invoice For 4 cases of pizza dough (50 per case)";
-            string ordersdate2 = "05/20/2021"; 
-            string ordersprice2 = "$171.95";
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
+            string ordersTitle2 = "Pietro's Pizzeria Order";
+            string ordersDescription2 = "Pietro's Pizzeria Order Invoice For 4 cases of pizza dough (50 per case)";
+            string ordersDate2 = "05/20/2021"; 
+            string ordersPrice2 = "$171.95";
 
-            Orders newOrders1 = new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
-            Orders newOrders2 = new Orders(orderstitle2, ordersdescription2, ordersdate2, ordersprice2);
+            Orders newOrders1 = new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
+            Orders newOrders2 = new Orders(ordersTitle2, ordersDescription2, ordersDate2, ordersPrice2);
             Orders result = Orders.Find(2);
             Assert.AreEqual(newOrders2, result);
         }

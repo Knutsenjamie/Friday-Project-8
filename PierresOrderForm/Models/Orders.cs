@@ -11,12 +11,12 @@ namespace PierresOrderForm.Models
         public string OrdersPrice  { get; set; }
         private static List<Orders> _instances = new() { };
 
-        public Orders(string orderstitle, string ordersdescription, string ordersdate, string ordersprice)
+        public Orders(string ordersTitle, string ordersDescription, string ordersDate, string ordersPrice)
         {
-            OrdersTitle = orderstitle;
-            OrdersDescription = ordersdescription;
-            OrdersDate = ordersdate; 
-            OrdersPrice = ordersprice;
+            OrdersTitle = ordersTitle;
+            OrdersDescription = ordersDescription;
+            OrdersDate = ordersDate; 
+            OrdersPrice = ordersPrice;
             _instances.Add(this);
             Id = _instances.Count;
         }

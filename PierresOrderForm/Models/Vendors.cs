@@ -12,10 +12,10 @@ namespace PierresOrderForm.Models
 
 
 
-        public Vendors(string vendorsname, string vendordescription)
+        public Vendors(string vendorsName, string vendorDescription)
         {
-            VendorsName = vendorsname;
-            VendorDescription = vendordescription;
+            VendorsName = vendorsName;
+            VendorDescription = vendorDescription;
             _instances.Add(this);
             Id = _instances.Count;
             Orders = new List<Orders>{};

@@ -23,30 +23,30 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void GetVendorsName_ReturnsVendorsName_String()
         {
-            string vendorsname = "Joe's Cafe";
-            string vendordescription = "Test";
+            string vendorsName = "Joe's Cafe";
+            string vendorDescription = "Test";
             
-            Vendors newVendors =  new Vendors(vendorsname, vendordescription);
+            Vendors newVendors =  new Vendors(vendorsName, vendorDescription);
             string result = newVendors.VendorsName;
-            Assert.AreEqual(vendorsname, result);
+            Assert.AreEqual(vendorsName, result);
         }
         
         [TestMethod]
         public void GetVendorsDescription_ReturnsVendorsDescription_String()
         {
-            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
-            string vendorsname = "Joe's Cafe";
-            Vendors newVendors =  new Vendors(vendordescription, vendorsname);
+            string vendorDescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsName = "Joe's Cafe";
+            Vendors newVendors =  new Vendors(vendorDescription, vendorsName);
             string result = newVendors.VendorDescription;
-            Assert.AreEqual(vendorsname, result);
+            Assert.AreEqual(vendorsName, result);
         }
         
         [TestMethod]
         public void GetId_ReturnsVendorsId_Int()
         {
-            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
-            string vendorsname = "Joe's Cafe";
-            Vendors newVendors = new Vendors(vendordescription, vendorsname);
+            string vendorDescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsName = "Joe's Cafe";
+            Vendors newVendors = new Vendors(vendorDescription, vendorsName);
             int result = newVendors.Id;
             Assert.AreEqual(1, result);
         }
@@ -54,12 +54,12 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void GetAll_ReturnsAllVendorsObjects_VendorsList()
         {
-            string vendordescription1 = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
-            string vendorsname1 = "Joe's Cafe";
-            string vendordescription2 = "Pietro's Pizzeria - local american/italian pizzeria serving hand-tossed pies daily";
-            string vendorsname2 = "Pietro's Pizzeria";
-            Vendors newVendors1 = new Vendors(vendordescription1, vendorsname1);
-            Vendors newVendors2 = new Vendors(vendordescription2, vendorsname2);
+            string vendorDescription1 = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsName1 = "Joe's Cafe";
+            string vendorDescription2 = "Pietro's Pizzeria - local american/italian pizzeria serving hand-tossed pies daily";
+            string vendorsName2 = "Pietro's Pizzeria";
+            Vendors newVendors1 = new Vendors(vendorDescription1, vendorsName1);
+            Vendors newVendors2 = new Vendors(vendorDescription2, vendorsName2);
             List<Vendors> newList = new List<Vendors> { newVendors1, newVendors2 };
             List<Vendors> result = Vendors.GetAll();
             CollectionAssert.AreEqual(newList, result);
@@ -68,12 +68,12 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void Find_ReturnsCorrectVendors_Vendors()
         {
-            string vendordescription1 = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
-            string vendorsname1 = "Joe's Cafe";
-            string vendordescription2 = "Pietro's Pizzeria - local american/italian pizzeria serving hand-tossed pies daily";
-            string vendorsname2 = "Pietro's Pizzeria";
-            Vendors newVendors1 = new Vendors(vendordescription1, vendorsname1);
-            Vendors newVendors2 = new Vendors(vendordescription2, vendorsname2);
+            string vendorDescription1 = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsName1 = "Joe's Cafe";
+            string vendorDescription2 = "Pietro's Pizzeria - local american/italian pizzeria serving hand-tossed pies daily";
+            string vendorsName2 = "Pietro's Pizzeria";
+            Vendors newVendors1 = new Vendors(vendorDescription1, vendorsName1);
+            Vendors newVendors2 = new Vendors(vendorDescription2, vendorsName2);
             Vendors result = Vendors.Find(2);
             Assert.AreEqual(newVendors2, result);
         }
@@ -81,15 +81,15 @@ namespace PierresOrderForm.Tests
         [TestMethod]
         public void AddOrders_AssociatesOrdersWithVendors_OrdersList()
         {
-            string orderstitle = "Joe's Cafe Order";
-            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
-            string ordersdate = "05/14/2021"; 
-            string ordersprice = "$185.50";
-            Orders newOrders = new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            string ordersTitle = "Joe's Cafe Order";
+            string ordersDescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersDate = "05/14/2021"; 
+            string ordersPrice = "$185.50";
+            Orders newOrders = new Orders(ordersTitle, ordersDescription, ordersDate, ordersPrice);
             List<Orders> newList = new List<Orders> { newOrders };
-            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
-            string vendorsname = "Joe's Cafe";
-            Vendors newVendors = new Vendors(vendordescription, vendorsname);
+            string vendorDescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsName = "Joe's Cafe";
+            Vendors newVendors = new Vendors(vendorDescription, vendorsName);
             newVendors.AddOrders(newOrders);
             List<Orders> result = newVendors.Orders;
             CollectionAssert.AreEqual(newList, result);
