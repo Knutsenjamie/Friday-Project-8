@@ -41,7 +41,15 @@ namespace PierresOrderForm.Tests
             Assert.AreEqual(vendorsname, result);
         }
         
-        
+        [TestMethod]
+        public void GetId_ReturnsVendorsId_Int()
+        {
+            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsname = "Joe's Cafe";
+            Vendors newVendors = new Vendors(vendordescription, vendorsname);
+            int result = newVendors.Id;
+            Assert.AreEqual(0, result);
+        }
 
     }
 }

@@ -16,14 +16,19 @@ namespace PierresOrderForm.Models
         {
             VendorsName = vendorsname;
             VendorDescription = vendordescription;
-            Id = _instances.Count;
             _instances.Add(this);
+            Id = _instances.Count;
             Orders = new List<Orders>{};
         }
 
         public static void ClearAll()
         {
             _instances.Clear();
+        }
+
+        public static List<Vendors> GetAll()
+        {
+            return _instances;
         }
 
     }
