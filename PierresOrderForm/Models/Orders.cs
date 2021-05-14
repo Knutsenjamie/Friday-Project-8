@@ -22,7 +22,12 @@ namespace PierresOrderForm.Models
         }
         public static List<Orders> GetAll()
         {
-            return ;
+            return _instances;
+        }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
         }
     }
 }
