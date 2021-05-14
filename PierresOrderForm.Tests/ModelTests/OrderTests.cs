@@ -60,6 +60,15 @@ namespace PierresOrderForm.Tests
             string result = newOrders.OrdersPrice;
             Assert.AreEqual(ordersprice, result);
         }
+        [TestMethod]
+        public void GetAll_ReturnsEmptyList_OrderList()
+        {
+
+            List<Orders> newList = new List<Orders> { };
+            List<Orders> result = Orders.GetAll();
+            CollectionAssert.AreEqual(newList, result);
+            
+        }
         
 
     }

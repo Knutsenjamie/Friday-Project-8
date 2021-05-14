@@ -17,6 +17,12 @@ namespace PierresOrderForm.Models
             OrdersDescription = ordersdescription;
             OrdersDate = ordersdate; 
             OrdersPrice = ordersprice;
+            _instances.Add(this);
+            Id = _instances.Count;
+        }
+        public static List<Orders> GetAll()
+        {
+            return ;
         }
     }
 }
