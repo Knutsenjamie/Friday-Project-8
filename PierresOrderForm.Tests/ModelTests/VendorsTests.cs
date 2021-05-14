@@ -48,7 +48,7 @@ namespace PierresOrderForm.Tests
             string vendorsname = "Joe's Cafe";
             Vendors newVendors = new Vendors(vendordescription, vendorsname);
             int result = newVendors.Id;
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(1, result);
         }
 
     }
