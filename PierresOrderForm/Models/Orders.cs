@@ -13,7 +13,7 @@ namespace PierresOrderForm.Models
 
         public Orders(string orderstitle, string ordersdescription, string ordersdate, string ordersprice)
         {
-            OrdersTitle = "";
+            OrdersTitle = orderstitle;
             OrdersDescription = ordersdescription;
             OrdersDate = ordersdate; 
             OrdersPrice = ordersprice;
