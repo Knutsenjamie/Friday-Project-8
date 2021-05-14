@@ -78,5 +78,21 @@ namespace PierresOrderForm.Tests
             Assert.AreEqual(newVendors2, result);
         }
 
+        [TestMethod]
+        public void AddOrders_AssociatesOrdersWithVendors_OrdersList()
+        {
+            string orderstitle = "Joe's Cafe Order";
+            string ordersdescription = "Joe's Cafe Order Invoice For x50 Pan Au Chocolat and x120 Traditional Croissants";
+            string ordersdate = "05/14/2021"; 
+            string ordersprice = "$185.50";
+            Orders newOrders = new Orders(orderstitle, ordersdescription, ordersdate, ordersprice);
+            List<Orders> newList = new List<Orders> { newOrders };
+            string vendordescription = "Joe's Cafe - a small and quaint cafe serving fresh coffee and french pastries";
+            string vendorsname = "Joe's Cafe";
+            Vendors newVendors = new Vendors(vendordescription, vendorsname);
+            newVendors.AddOrders(newOrders);
+            List<Orders> result = newVendors.Orders;
+            CollectionAssert.AreEqual(newList, result);
+        }
     }
 }

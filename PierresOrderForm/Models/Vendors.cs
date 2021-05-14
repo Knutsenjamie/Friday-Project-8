@@ -8,7 +8,7 @@ namespace PierresOrderForm.Models
         public string VendorsName { get; set; }
         public string VendorDescription { get; set; }
         public int Id { get; }
-        private static List<Orders> Orders { get; set; }
+        public List<Orders> Orders { get; set; }
 
 
 
@@ -34,6 +34,11 @@ namespace PierresOrderForm.Models
         public static Vendors Find(int searchId)
         {
             return _instances[searchId-1];
+        }
+
+        public void AddOrders(Orders orders)
+        {
+        
         }
 
     }
