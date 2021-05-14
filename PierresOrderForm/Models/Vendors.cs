@@ -38,7 +38,7 @@ namespace PierresOrderForm.Models
 
         public void AddOrders(Orders orders)
         {
-        
+            Orders.Add(orders);
         }
 
     }
