@@ -17,7 +17,7 @@ namespace PierresOrderForm.Controllers
     [HttpPost("/orders/delete")]
     public ActionResult DeleteAll()
     {
-      Item.ClearAll();
+      Orders.ClearAll();
       return View();
     }
 
